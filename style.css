@@ -1,0 +1,360 @@
+
+/**************** Globals ****************/
+body {
+    margin: 0;
+    background: #00bf8f;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    color: #f9f8f9;
+    font-size: 4em;
+    font-weight: normal;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+button {
+    padding: 10px 30px;
+    outline: none;
+    cursor: pointer;
+
+    color: #00bf8f;
+    font-size: 20px;
+    background: #f9f8f9;
+    border: 1px solid #00bf8f;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+button:hover {
+    color: #f9f8f9;
+    background: #00bf8f;
+    border: 1px solid #f9f8f9;
+}
+
+div.rightAlign {
+    text-align: right;
+}
+
+div#container {
+    max-width: 1200px;
+    margin: 0 auto 240px auto;
+}
+
+
+/****************  Issues ****************/
+div.issue, div#comments {
+    padding: 40px;
+    margin: 25px;
+    background: #f9f8f9;
+    border-radius: 10px;
+}
+
+/*** Labels ***/
+div.issue div.issueLabels {
+    display: block;
+    margin: 20px 0 22px 0;
+}
+
+div.issue div.issueLabels span.issueLabel {
+    padding-right: 50px;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+/*** Title ***/
+div.issue h2.issueNumberTitle,
+div.issue h2.issueStateTitle {
+    margin: 0;
+    font-size: 32px;
+    line-height: 48px;
+    -ms-word-break: break-word;
+    word-break: break-word;
+    text-transform: uppercase;
+}
+
+/*** User ***/
+div.issue img, div.comment img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid #00bf8f;
+}
+
+div.issue h3.user, div.comment h3.user {
+    display: inline-block;
+    margin: 0 0 0 12px;
+    vertical-align: 110%;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+div.issue h3.user a, div.issue div.issueBody a,
+div.comment h3.user a, div.comment div.issueBody p a {
+    color: #00bf8f;
+}
+
+div.issue h3.user a:hover, div.issue div.issueBody a:hover,
+div.comment h3.user a:hover, div.comment div.issueBody p a:hover {
+    color: #00916c;
+}
+
+/*** Body Text ***/
+div.issue div.issueBody, div.comment div.issueBody {
+    margin: 20px 0;
+    font-size: 20px;
+    line-height: 38px;
+    -ms-word-break: break-word;
+    word-break: break-word;
+}
+
+div.issue div.issueBody p, div.comment div.issueBody p {
+    margin: 0;
+}
+
+/*** Comments ***/
+div#comments h1 {
+    margin: 0;
+    color: black;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+div#comments div.comment {
+    padding: 40px 20px 20px 20px;
+    border-bottom: 2px solid #00bf8f;
+}
+
+div#comments div.comment:nth-child(2) {
+    margin-top: 40px;
+    border-top: 2px solid #00bf8f;
+}
+
+
+/**************** Page Navigation ****************/
+div.pageButtons {
+    padding: 40px;
+    margin: 0 25px;
+    font-size: 22px;
+
+    text-align: center;
+    background: #f9f8f9;
+    border-radius: 10px;
+}
+
+div.pageButtons ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+div.pageButtons ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+div.pageButtons ul li a {
+    color: #00bf8f;
+}
+
+div.pageButtons ul li a:hover {
+    color: #00916c;
+}
+
+/* Current Page */
+div.pageButtons ul li.active a {
+    color: #00916c;
+    padding: 5px 10px;
+    border: 1px solid #00916c;
+}
+
+/* Disabled */
+div.pageButtons ul li.disabled a {
+    color: #e1e0e1;
+}
+
+div.pageButtons ul li.disabled a:hover {
+    cursor: default;
+}
+
+/* Back to Top Icon */
+img#backToTop {
+    position: fixed;
+    right: 17%;
+    cursor: pointer;
+}
+
+
+/**************** Responsiveness ****************/
+@media( max-width: 915px ) {
+    div.pageButtons ul li {
+        margin: 20px;
+    }
+}
+
+@media( max-width: 600px ) {
+    button {
+        width: 100%;
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+}
+
+@media( max-width: 500px ) {
+    h1 {
+        font-size: 3em;
+    }
+
+    div#comments h1 {
+        font-size: 1.5em;
+    }
+
+    div.issue, div#comments {
+        padding: 25px;
+        margin: 25px 10px;
+    }
+
+    div.issue h2.issueNumberTitle, div.issue h2.issueStateTitle {
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+
+    div.issue div.issueLabels span.issueLabel {
+        padding-right: 25px;
+        font-size: 18px;
+        line-height: 34px;
+    }
+
+    div.issue h3.user, div.comment h3.user {
+        vertical-align: 120%;
+        font-size: 20px;
+    }
+
+    div.issue div.issueBody, div.comment div.issueBody {
+        font-size: 16px;
+        line-height: 34px;
+    }
+
+    div#comments div.comment:nth-child(2) {
+        margin-top: 25px;
+    }
+
+    div#comments div.comment {
+        padding: 25px 10px 5px 10px;
+    }
+
+    div.pageButtons {
+        padding: 20px;
+        margin: 0 10px;
+    }
+}
+
+/*** Back to Top Icon ***/
+@media( max-width: 1890px ) {
+    img#backToTop {
+        right: 16%;
+    }
+}
+
+@media( max-width: 1840px ) {
+    img#backToTop {
+        right: 15%;
+    }
+}
+
+@media( max-width: 1790px ) {
+    img#backToTop {
+        right: 14%;
+    }
+}
+
+@media( max-width: 1740px ) {
+    img#backToTop {
+        right: 13%;
+    }
+}
+
+@media( max-width: 1690px ) {
+    img#backToTop {
+        right: 12%;
+    }
+}
+
+@media( max-width: 1640px ) {
+    img#backToTop {
+        right: 11%;
+    }
+}
+
+@media( max-width: 1590px ) {
+    img#backToTop {
+        right: 9%;
+    }
+}
+
+@media( max-width: 1540px ) {
+    img#backToTop {
+        right: 8%;
+    }
+}
+
+@media( max-width: 1490px ) {
+    img#backToTop {
+        right: 7%;
+    }
+}
+
+@media( max-width: 1460px ) {
+    img#backToTop {
+        right: 5%;
+    }
+}
+
+@media( max-width: 1400px ) {
+    img#backToTop {
+        right: 3%;
+    }
+}
+
+@media( max-width: 1350px ) {
+    img#backToTop {
+        right: 2%;
+    }
+}
+
+@media( max-width: 1310px ) {
+    img#backToTop {
+        right: 1%;
+    }
+}
+
+@media( max-width: 1280px ) {
+    img#backToTop {
+        right: 0.5%;
+    }
+}
+
+@media( max-width: 1260px ) {
+    img#backToTop {
+        display: none;
+    }
+}
